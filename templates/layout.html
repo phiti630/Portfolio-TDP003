@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+</head>
+
+<body>
+<pre>
+ _|_|_|                          _|          _|_|            _|  _|            
+ _|    _|    _|_|    _|  _|_|  _|_|_|_|    _|        _|_|    _|        _|_|    
+ _|_|_|    _|    _|  _|_|        _|      _|_|_|_|  _|    _|  _|  _|  _|    _|  
+ _|        _|    _|  _|          _|        _|      _|    _|  _|  _|  _|    _|  
+ _|          _|_|    _|            _|_|    _|        _|_|    _|  _|    _|_|    
+</pre>
+    -------------------------------------------------------<br>
+    | <a href="/">Start</a> - <a href="/list">Alla projekt</a> - <a href="/techniques">Tekniker</a> - <a href="/results">Avancerad sökning</a> |<br>
+    -------------------------------------------------------<br>
+<div id="content">
+    {{text}}
+{% block content %} {% endblock %}
+</div>
+<form action="/results" method="GET">
+    Sök bland projekt: <input name="search"></input><input type="submit" 
+value="Snabbsök!"></input>
+</body>
+</html>

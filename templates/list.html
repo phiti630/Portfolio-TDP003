@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Här är de projekt som finns i databasen</h2><br>
+<ul>
+    {% for project in projects %}
+    <li><a href="project/{{project['id']}}">{{project['name']}} - {{project['description']}}</a></li>
+{% endfor %}
+</ul>
+<br>
+<form action="" method="GET"> 
+    Sortera efter: <input name="key"></input><input type="submit" value="Sortera."></input>
+</form>
+
+
+{% endblock %}

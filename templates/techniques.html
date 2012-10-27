@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Här är de tekniker som använts till projekten</h2><br>
+<ul>
+    {% for tech in techniques %}
+    <li>{{tech}}</li>
+    <ul>
+        {% for project in techniques[tech] %}
+        <li><a href="project/{{project['id']}}">{{project['name']}} - {{project['description']}}</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</ul>
+<br>
+
+{% endblock %}

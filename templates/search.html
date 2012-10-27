@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Portfolio - sökning</h2><br>
+<form action="/results" method="GET">
+Avancerad sökning:<br>
+Sök efter: <input type="text" name="search"> i följande fält:<br>
+{% for field in fields %}
+<input type="checkbox" name ="search_fields" value="{{field}}">{{field}}
+{% if loop.index is divisibleby 3 %}
+<br>
+{% endif %}
+{% endfor %}
+
+<br>
+-----<br>
+Sök bland projekt som använder följande tekniker:<br>
+{% for technique in techniques %}
+<input type="checkbox" name ="techniques" value="{{technique}}">{{technique}}
+{% if loop.index is divisibleby 5 %}
+<br>
+{% endif %}
+{% endfor %}
+
+<br>
+-----<br>
+Sortera i <input type="radio" name="sort_order" value="desc">fallande eller <input type="radio" name="sort_order" value="asc">stigande ordning baserat på:<br>
+{% for field in fields %}
+<input type="radio" name ="sort_by" value="{{field}}">{{field}}
+{% if loop.index is divisibleby 3 %}
+<br>
+{% endif %}
+{% endfor %}
+<br>
+(Väljs inga tekniker eller sökfält sker sökningen i hela databasen)
+<br>
+<input type="submit" value="Sök!">
+
+
+<h3>Sökresultat:</h3>
+<ul>
+    {% for project in projects %}
+    <li><a href="project/{{project['project_no']}}">{{project['project_name']}} - {{project['short_description']}}</a></li>
+{% else %}
+Inga resultat.
+{% endfor %}
+</ul>
+<br>
+
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{project['project_name']}}</h2><br>
+{{project['start_date']}} - {{project['end_date']}}
+<br>
+{{project['long_description']}}
+<br>
+I projektet har följande tekniker använts: {% for technique in project['techniques_used'] %} {{technique}}, {% endfor %}
+
+{% endblock %}

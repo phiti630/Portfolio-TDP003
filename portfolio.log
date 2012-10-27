@@ -1,0 +1,9 @@
+INFO :  * Running on http://127.0.0.1:5000/
+INFO :  * Running on http://127.0.0.1:5000/
+INFO : 127.0.0.1 - - [21/Oct/2012 21:01:54] "GET / HTTP/1.1" 200 -
+INFO : 127.0.0.1 - - [21/Oct/2012 21:01:55] "GET /favicon.ico HTTP/1.1" 404 -
+INFO :  * Running on http://127.0.0.1:5000/
+INFO : 127.0.0.1 - - [21/Oct/2012 22:22:09] "GET / HTTP/1.1" 200 -
+INFO : 127.0.0.1 - - [21/Oct/2012 22:22:09] "GET /favicon.ico HTTP/1.1" 404 -
+INFO : 127.0.0.1 - - [21/Oct/2012 22:22:09] "GET /favicon.ico HTTP/1.1" 404 -
+INFO : 127.0.0.1 - - [21/Oct/2012 22:22:13] "GET /results HTTP/1.1" 200 -
